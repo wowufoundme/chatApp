@@ -10,13 +10,20 @@
   /* font-family: 'Domine', serif; */
   font-size: 72px;
   font-weight: 700;
-  margin: 50px 0;
+  margin: 50px 0 100px;
   color: #ededed;
 }
 
 .joinOuterContainer {
   padding: 100px;
   background-color: rgb(28, 28, 28);
+}
+
+.joinInnerContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .formInputMain {
@@ -26,7 +33,7 @@
   border-bottom: 1px solid #555555;
   width: 600px;
   height: 100px;
-  padding: 40px 0 10px 20px;
+  padding: 40px 0 5px 20px;
   font-size: 24px;
   background: transparent;
   caret-color: #555555;
