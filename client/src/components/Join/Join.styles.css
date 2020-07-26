@@ -54,13 +54,12 @@
   font-size: 22px;
   cursor: pointer;
   background: transparent;
-  border: 5px solid #555555;
-  color: #999999;
-  transition: all .1s ease-out;
+  border: 1px solid #555555;
+  color: #555555;
+  transition: all .2s ease-out;
 }
 
 .button:hover {
-  background: #ededed;
-  border: 5px solid #ededed;
-  color: rgb(28, 28, 28);
+  border: 1px solid #ffffff;
+  color: #ffffff;
 }

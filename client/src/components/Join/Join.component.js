@@ -20,7 +20,7 @@ const Join = props => {
         </div>
         <div className='buttonContainer'>
           <Link onClick={(event) => (!name || !room) ? event.preventDefault() : null} to={`/chat?name=${name}&room=${room}`}>
-            <button className='button mt-20' type='submit'>{'Join Room'.toUpperCase()}</button>
+            <button className='button mt-20' type='submit'>{'Join Room'.toUpperCase()} → </button>
           </Link>
         </div>
       </div>
