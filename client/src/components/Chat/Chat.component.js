@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import queryString from 'query-string';
 import io from 'socket.io-client';
 
+import Chatbox from '../Chatbox/Chatbox.component';
+
 let socket;
 
 const Chat = props => {
@@ -18,9 +20,8 @@ const Chat = props => {
     setRoom(room);
 
     socket.emit('join', { name, room }, () => {
-
     });
-
+    document.title = `Room: ${room}`;
     return () => {
       socket.emit('disconnect');
       socket.off();
@@ -44,10 +45,9 @@ const Chat = props => {
   console.log(message, messages);
 
   return (
-    <div className='outerContainer'>
-      <div className='container'>
-        <input value={message} onChange={(event) => setMessage(event.target.value)} onKeyPress={(event) => event.key === 'Enter' ? sendMessage(event) : null }/>
-      </div>
+    <div className='container'>
+      <Chatbox chatRoom={room}/>
+      <input value={message} onChange={(event) => setMessage(event.target.value)} onKeyPress={(event) => event.key === 'Enter' ? sendMessage(event) : null }/>
     </div>
   )
 }
