@@ -2,7 +2,7 @@ const express = require('express');
 const socketio = require('socket.io');
 const http = require('http');
 
-const { addUser, getUser, removeUser, getUsersInRoom } = require('./users');
+const { addUser, getUser, removeUser, getUsersInRoom } = require('./user');
 
 const PORT = process.env.PORT || 5000;
 
@@ -23,7 +23,6 @@ io.on('connection', (socket) => {
     socket.emit('message', { user: 'admin', text:`Hello ${user.name}. Welcome to Room: ${user.room}`});
     socket.broadcast.to(user.room).emit('message', { user: 'admin', text: `${user.name} has joined the room`});
     socket.join(user.room);
-    callback();
   })
 
   socket.on('sendMessage', (message, callback) => {
