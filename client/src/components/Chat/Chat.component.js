@@ -8,11 +8,14 @@ const Chat = props => {
   const { location } = props;
   const [name, setName] = useState('');
   const [room, setRoom] = useState('');
+  const url = 'localhost:5000';
   useEffect(() => {
     const { name, room } = queryString.parse(location.search);
+    socket = io(url);
     setName(name);
     setRoom(room);
-  })
+    console.log(name, room, socket);
+  }, [url, location.search])
 
   return (
     <div>
