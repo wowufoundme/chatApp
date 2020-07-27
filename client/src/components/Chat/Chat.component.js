@@ -14,7 +14,9 @@ const Chat = props => {
     socket = io(url);
     setName(name);
     setRoom(room);
-    console.log(name, room, socket);
+
+    socket.emit('join', { name, room });
+
   }, [url, location.search])
 
   return (
