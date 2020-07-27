@@ -1,0 +1,9 @@
+.headerContainer {
+  height: 80px;
+  background-color: #1e88e5;
+  color: #ffffff;
+  display: grid;
+  grid-template-columns: 80% 20%;
+  align-items: center;
+  padding: 0 20px;
+}
