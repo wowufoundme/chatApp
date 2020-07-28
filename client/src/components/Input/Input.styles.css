@@ -1,0 +1,9 @@
+.sendMessageContainer {
+  background-color: #0a0a0a;
+  display: grid;
+  grid-template-columns: 75% 25%;
+}
+
+.sendMessageInput {
+  width: 100%;
+}
