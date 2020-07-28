@@ -22,14 +22,6 @@ const Chatbox = props => {
         <Header room={chatRoom}/>
         <MessagesBox />
         <Input message={message} setMessage={setMessage} sendMessage={sendMessage}/>
-        <input
-          value={message}
-          type='text'
-          placeholder='Type message...'
-          onChange={(event) => setMessage(event.target.value)}
-          onKeyPress={(event) => event.key === 'Enter' ? sendMessage(event) : null }
-          className='sendMessageInput'
-        />
       </div>
     </div>
   )
