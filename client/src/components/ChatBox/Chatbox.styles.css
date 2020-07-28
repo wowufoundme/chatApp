@@ -1,6 +1,6 @@
 .mainContainer {
   width: 625px;
-  height: 625px;
+  height: 825px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -10,12 +10,12 @@
 
 .chatBoxContainer {
   width:  600px;
-  height: 600px;
+  height: 800px;
   background: #4b6cb7;
   background: -webkit-linear-gradient(to bottom, #182848, #4b6cb7);
   background: linear-gradient(to bottom, #182848, #4b6cb7);
   display: grid;
-  grid-template-rows: 15% 70% 15%;
+  grid-template-rows: 15% 72% 13%;
   border-radius: 10px;
   overflow: hidden;
 }
