@@ -10,4 +10,6 @@
   width:  600px;
   height: 600px;
   background-color: #ffffff;
+  display: grid;
+  grid-template-rows: 15% 70% 15%;
 }
