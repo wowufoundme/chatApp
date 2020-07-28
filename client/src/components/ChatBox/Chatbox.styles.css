@@ -1,15 +1,21 @@
 .mainContainer {
-  width: 100vw;
-  height: 90vh;
+  width: 625px;
+  height: 625px;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #182848;
+  border-radius: 20px;
 }
 
 .chatBoxContainer {
   width:  600px;
   height: 600px;
-  background-color: #ffffff;
+  background: #4b6cb7;
+  background: -webkit-linear-gradient(to bottom, #182848, #4b6cb7);
+  background: linear-gradient(to bottom, #182848, #4b6cb7);
   display: grid;
   grid-template-rows: 15% 70% 15%;
+  border-radius: 10px;
+  overflow: hidden;
 }

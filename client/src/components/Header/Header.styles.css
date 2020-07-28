@@ -1,9 +1,26 @@
 .headerContainer {
-  height: 80px;
-  background-color: #1e88e5;
   color: #ffffff;
+  height: 80px;
   display: grid;
   grid-template-columns: 80% 20%;
   align-items: center;
   padding: 0 20px;
+}
+
+.titleHeader {
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.closeRoom a {
+  color: #ffffff;
+  padding-bottom: 2px;
+  border-bottom: 1px solid #ffffff;
+  text-decoration: none;
+  transition: all .05s ease-out;
+}
+
+.closeRoom a:hover {
+  padding-bottom: 4px;
 }
