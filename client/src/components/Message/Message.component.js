@@ -14,15 +14,36 @@ const Message = props => {
   if ( trimmedName === trimmedUser ) {
     isSentByCurrentUser = true;
   }
-  
+
+  // Auxialliary function to capitalize first letter of string
+  function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  }
+
   return (
-    <div className='messageBox'>
-      <div className='messageSender'>
-        {user}
-      </div>
-      <div className='messageSent'>
-        {text}
-      </div>
+
+    <div className='messagesContainer'>
+      {
+        isSentByCurrentUser ? (
+          <div className='messageBox mbRight'>
+            <div className='messageSender messageSenderRight'>
+              You
+            </div>
+            <div className='messageSent'>
+              {text}
+            </div>
+          </div>
+        ) : (
+          <div className='messageBox'>
+            <div className='messageSender'>
+              {capitalizeFirstLetter(user)}
+            </div>
+            <div className='messageSent'>
+              {text}
+            </div>
+          </div>
+        )
+      }
     </div>
   )
 }

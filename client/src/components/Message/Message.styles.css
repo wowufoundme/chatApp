@@ -1,0 +1,49 @@
+.messageBox {
+  margin: 5px 20px;
+  padding: 10px 20px;
+  background-color: #7780F4;
+  width: auto;
+  max-width: 60%;
+  border-radius: 40px 10px 10px 0;
+  color: #252937;
+  display: table;
+  clear: both;
+}
+
+.mbRight {
+  background-color: #ffffff;
+  color: #7780F4;
+  float: right;
+  border-radius: 10px 10px 0px 10px;
+  padding-left: 10px;
+}
+
+.messageSender {
+  font-weight: 700;
+  padding: 5px 0;
+  margin-bottom: 5px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  text-align: right;
+}
+
+.messageSenderRight {
+  border-bottom: 1px solid rgba(0, 0 ,0, 0.2);
+}
+
+.example-enter {
+  opacity: 0.01;
+}
+
+.example-enter.example-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+
+.example-leave {
+  opacity: 1;
+}
+
+.example-leave.example-leave-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in;
+}
