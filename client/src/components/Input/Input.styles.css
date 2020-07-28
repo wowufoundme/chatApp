@@ -6,4 +6,15 @@
 
 .sendMessageInput {
   width: 100%;
+  outline: none;
+  border: none;
+  border-top: 1px solid #999999;
+}
+
+.sendButton {
+  background: transparent;
+  outline: none;
+  border: none;
+  text-align: center;
+  cursor: pointer;
 }

@@ -19,6 +19,7 @@ const Input = props => {
       <button
         type='submit'
         onClick={(event) => sendMessage(event)}
+        className='sendButton'
       >
         Send
       </button>
