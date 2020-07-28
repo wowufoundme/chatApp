@@ -4,7 +4,7 @@ const http = require('http');
 
 const { addUser, getUser, removeUser, getUsersInRoom } = require('./user');
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 5532;
 
 const router = require('./router');
 
@@ -17,7 +17,7 @@ io.on('connection', (socket) => {
     const { error, user } = addUser({ id: socket.id, name, room });
 
     if (error) {
-      callback(error);
+      console.log(error);
     }
 
     socket.emit('message', { user: 'admin', text:`Hello ${user.name}. Welcome to Room: ${user.room}`});
