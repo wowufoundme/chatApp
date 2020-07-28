@@ -9,7 +9,6 @@ import Input from '../Input/Input.component';
 const Chatbox = props => {
 
   const {
-    name,
     chatRoom,
     message,
     setMessage,
