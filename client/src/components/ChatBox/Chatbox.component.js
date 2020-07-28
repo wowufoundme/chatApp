@@ -9,8 +9,10 @@ import Input from '../Input/Input.component';
 const Chatbox = props => {
 
   const {
+    name,
     chatRoom,
     message,
+    messages,
     setMessage,
     sendMessage
   } = props;
@@ -19,7 +21,7 @@ const Chatbox = props => {
     <div className='mainContainer'>
       <div className='chatBoxContainer'>
         <Header room={chatRoom}/>
-        <MessagesBox />
+        <MessagesBox messages={messages} name={name}/>
         <Input message={message} setMessage={setMessage} sendMessage={sendMessage}/>
       </div>
     </div>
