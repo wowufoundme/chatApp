@@ -1,10 +1,13 @@
 import React from 'react';
+import ScrollToBottom from 'react-scroll-to-bottom';
+
+import './MessagesBox.styles.css';
 
 const MessagesBox = props => {
   return (
-    <div>
-      <h1> Messages Box </h1>
-    </div>
+    <ScrollToBottom>
+      
+    </ScrollToBottom>
   )
 }
 

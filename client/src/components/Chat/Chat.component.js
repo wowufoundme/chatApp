@@ -50,6 +50,7 @@ const Chat = props => {
         name={name}
         chatRoom={room}
         message={message}
+        messages={messages}
         setMessage={setMessage}
         sendMessage={sendMessage}
       />
