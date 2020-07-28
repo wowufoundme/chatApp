@@ -1,31 +1,34 @@
 .messageBox {
   margin: 5px 20px;
   padding: 10px 20px;
-  background-color: #7780F4;
+  background-color: #2979FF;
   width: auto;
   max-width: 60%;
   border-radius: 40px 10px 10px 0;
-  color: #252937;
+  color: #ffffff;
   display: table;
   clear: both;
 }
 
 .mbRight {
-  background-color: #ffffff;
-  color: #7780F4;
+  background-color: #1A1A1D;
+  color: #ffffff;
   float: right;
   border-radius: 10px 10px 0px 10px;
   padding-left: 10px;
 }
 
 .messageSender {
+  font-size: 14px;
+  letter-spacing: 1px;
   font-weight: 700;
   padding: 5px 0;
   margin-bottom: 5px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   text-align: right;
+  font-style: italic;
 }
 
 .messageSenderRight {
-  border-bottom: 1px solid rgba(0, 0 ,0, 0.2);
+  text-align: left;
 }

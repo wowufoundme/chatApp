@@ -1,5 +1,4 @@
 .sendMessageContainer {
-  border-top: 1px solid rgba(102, 101, 255, 0.8);
   padding: 25px 30px;
 }
 
@@ -13,10 +12,10 @@
   width: 100%;
   outline: none;
   border: none;
-  background: #152233;
+  background: #dedede;
   padding-left: 20px;
   font-size: 14px;
-  color: #ffffff;
+  color: #1A1A1D;
   border-radius: 10px 0 0 10px;
   overflow: scroll;
 }
@@ -26,7 +25,7 @@
 }
 
 .sendButton {
-  background: #6665FF;
+  background: #2979FF;
   color: #ffffff;
   outline: none;
   border: none;
@@ -34,4 +33,9 @@
   border-bottom-right-radius: 10px;
   text-align: center;
   cursor: pointer;
+  transition: background .2s ease-in;
+}
+
+.sendButton:hover {
+  background: #2158b5;
 }

@@ -39,8 +39,12 @@ const Chat = props => {
 
   const sendMessage = event => {
     event.preventDefault();
+    console.log('entered here');
     if (message) {
-      socket.emit('sendMessage', message, () => setMessage(''));
+      socket.emit('sendMessage', message, () => {
+        setMessage('');
+        console.log('Emptitied string');
+      });
     }
   }
 

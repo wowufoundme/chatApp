@@ -1,6 +1,12 @@
 import React from 'react';
+import styled, { keyframes } from 'styled-components';
+import { fadeInDown } from 'react-animations';
 
 import './Message.styles.css';
+
+const FadeInDown = styled.div`
+  animation: 1s ${keyframes`${fadeInDown}`} 1;
+`;
 
 const Message = props => {
 
@@ -21,22 +27,23 @@ const Message = props => {
   }
 
   return (
-
     <div className='messagesContainer'>
       {
         isSentByCurrentUser ? (
-          <div className='messageBox mbRight'>
-            <div className='messageSender messageSenderRight'>
-              You
+          <FadeInDown>
+            <div className='messageBox mbRight'>
+              <div className='messageSender messageSenderRight'>
+                You
+              </div>
+              <div className='messageSent'>
+                {text}
+              </div>
             </div>
-            <div className='messageSent'>
-              {text}
-            </div>
-          </div>
+          </FadeInDown>
         ) : (
           <div className='messageBox'>
-            <div className='messageSender'>
-              {capitalizeFirstLetter(user)}
+            <div className='messageSender messageSenderLeft'>
+              ~ {capitalizeFirstLetter(user)}
             </div>
             <div className='messageSent'>
               {text}

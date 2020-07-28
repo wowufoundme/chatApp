@@ -22,7 +22,7 @@ const Input = props => {
           onClick={(event) => sendMessage(event)}
           className='sendButton'
         >
-          Send
+          Send →
         </button>
       </div>
     </div>

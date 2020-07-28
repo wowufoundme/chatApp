@@ -31,7 +31,7 @@
   outline: none;
   border: none;
   border-bottom: 1px solid #555555;
-  width: 600px;
+  width: 500px;
   height: 100px;
   padding: 40px 0 5px 20px;
   font-size: 24px;
@@ -49,17 +49,19 @@
   margin-top: 40px;
 }
 
-.button {
+.button,
+.button:focus,
+.button:visited {
+  width: 100%;
   padding: 20px 60px;
-  font-size: 22px;
+  font-size: 16px;
   cursor: pointer;
-  background: transparent;
-  border: 1px solid #555555;
-  color: #555555;
+  background: #2979FF;
+  border: none;
+  color: #ffffff;
   transition: all .2s ease-out;
 }
 
 .button:hover {
-  border: 1px solid #ffffff;
-  color: #ffffff;
+  background: #2158b5;
 }

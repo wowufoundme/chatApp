@@ -1,5 +1,6 @@
 .headerContainer {
-  color: #ffffff;
+  background-color: #efefef;
+  color: #1A1A1D;
   height: 80px;
   display: grid;
   grid-template-columns: 80% 20%;
@@ -14,9 +15,9 @@
 }
 
 .closeRoom a {
-  color: #ffffff;
+  color: #1A1A1D;
   padding-bottom: 2px;
-  border-bottom: 1px solid #ffffff;
+  border-bottom: 1px solid #1A1A1D;
   text-decoration: none;
   transition: all .05s ease-out;
 }
