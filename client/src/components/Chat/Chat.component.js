@@ -12,7 +12,7 @@ const Chat = props => {
   const [room, setRoom] = useState('');
   const [message, setMessage] = useState('');
   const [messages, setMessages] = useState([]);
-  const url = 'localhost:5000';
+  const url = 'localhost:5532';
   useEffect(() => {
     const { name, room } = queryString.parse(location.search);
     socket = io(url);
@@ -46,7 +46,13 @@ const Chat = props => {
 
   return (
     <div className='container'>
-      <Chatbox name={name} chatRoom={room}/>
+      <Chatbox
+        name={name}
+        chatRoom={room}
+        message={message}
+        setMessage={setMessage}
+        sendMessage={sendMessage}
+      />
     </div>
   )
 }
