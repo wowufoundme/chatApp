@@ -23,7 +23,7 @@ const Chat = props => {
 
     socket.emit('join', { name, room }, () => {
     });
-    document.title = `Room: ${room}`;
+    document.title = `Room: ${room} | User: ${name}`;
     return () => {
       socket.emit('disconnect');
       socket.off();
