@@ -4,6 +4,8 @@ import io from 'socket.io-client';
 
 import Chatbox from '../Chatbox/Chatbox.component';
 
+import './Chat.styles.css';
+
 let socket;
 
 const Chat = props => {
