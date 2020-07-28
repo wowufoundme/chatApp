@@ -46,8 +46,7 @@ const Chat = props => {
 
   return (
     <div className='container'>
-      <Chatbox chatRoom={room}/>
-      <input value={message} onChange={(event) => setMessage(event.target.value)} onKeyPress={(event) => event.key === 'Enter' ? sendMessage(event) : null }/>
+      <Chatbox name={name} chatRoom={room}/>
     </div>
   )
 }
