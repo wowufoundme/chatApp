@@ -15,7 +15,7 @@ const Chat = props => {
   const [message, setMessage] = useState('');
   const [messages, setMessages] = useState([]);
   const [usersInRoom, setUsersInRoom] = useState(['Admin']);
-  const url = 'localhost:5000';
+  const url = 'https://chatapp-1201.herokuapp.com/';
   useEffect(() => {
     const { name, room } = queryString.parse(location.search);
     socket = io(url);
