@@ -4,7 +4,7 @@ const http = require('http');
 
 const { addUser, getUser, removeUser, getUsersInRoom } = require('./user');
 
-const PORT = process.env.PORT || 5532;
+const PORT = process.env.PORT || 5000;
 
 const router = require('./router');
 

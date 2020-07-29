@@ -14,7 +14,7 @@ const Chat = props => {
   const [room, setRoom] = useState('');
   const [message, setMessage] = useState('');
   const [messages, setMessages] = useState([]);
-  const url = 'localhost:5532';
+  const url = 'localhost:5000';
   useEffect(() => {
     const { name, room } = queryString.parse(location.search);
     socket = io(url);
