@@ -1,13 +1,7 @@
 import React from 'react';
 import ReactEmoji from 'react-emoji';
-import styled, { keyframes } from 'styled-components';
-import { fadeInDown } from 'react-animations';
 
 import './Message.styles.css';
-
-const FadeInDown = styled.div`
-  animation: 1s ${keyframes`${fadeInDown}`} 1;
-`;
 
 const Message = props => {
 
@@ -36,16 +30,14 @@ const Message = props => {
     <div className='messagesContainer'>
       {
         isSentByCurrentUser ? (
-          <FadeInDown>
-            <div className='messageBox mbRight'>
-              <div className='messageSender messageSenderRight'>
-                You
-              </div>
-              <div className='messageSent'>
-                {ReactEmoji.emojify(text)}
-              </div>
+          <div className='messageBox mbRight'>
+            <div className='messageSender messageSenderRight'>
+              You
             </div>
-          </FadeInDown>
+            <div className='messageSent'>
+              {ReactEmoji.emojify(text)}
+            </div>
+          </div>
         ) : (
           <div className='messageBox'>
             <div className='messageSender messageSenderLeft'>
