@@ -14,11 +14,16 @@ const Message = props => {
   const { user, text } = props.message;
 
   let isSentByCurrentUser = false;
+  let isSentByAdmin = false;
   const trimmedUser = user.trim().toLowerCase();
   const trimmedName = name.trim().toLowerCase();
 
   if ( trimmedName === trimmedUser ) {
     isSentByCurrentUser = true;
+  }
+
+  if ( trimmedUser === 'admin' ) {
+    isSentByAdmin = true;
   }
 
   // Auxialliary function to capitalize first letter of string
@@ -43,7 +48,9 @@ const Message = props => {
         ) : (
           <div className='messageBox'>
             <div className='messageSender messageSenderLeft'>
-              ~ {capitalizeFirstLetter(user)}
+                {
+                  isSentByAdmin ? null : `~ ${capitalizeFirstLetter(user)}`
+                }
             </div>
             <div className='messageSent'>
               {text}

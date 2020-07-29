@@ -1,6 +1,7 @@
 .messageBox {
-  margin: 5px 20px;
-  padding: 10px 20px;
+  margin: 10px 20px;
+  padding: 0 20px;
+  padding-bottom: 10px;
   background-color: #2979FF;
   width: auto;
   max-width: 60%;
@@ -24,7 +25,6 @@
   font-weight: 700;
   padding: 5px 0;
   margin-bottom: 5px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   text-align: right;
   font-style: italic;
 }
