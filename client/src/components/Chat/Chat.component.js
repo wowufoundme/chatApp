@@ -14,6 +14,7 @@ const Chat = props => {
   const [room, setRoom] = useState('');
   const [message, setMessage] = useState('');
   const [messages, setMessages] = useState([]);
+  const [usersInRoom, setUsersInRoom] = useState(['Admin']);
   const url = 'localhost:5000';
   useEffect(() => {
     const { name, room } = queryString.parse(location.search);
@@ -28,7 +29,6 @@ const Chat = props => {
       socket.emit('disconnect');
       socket.off();
     }
-
   }, [url, location.search]);
 
   useEffect(() => {
@@ -39,13 +39,32 @@ const Chat = props => {
 
   const sendMessage = event => {
     event.preventDefault();
-    console.log('entered here');
     if (message) {
       socket.emit('sendMessage', message, () => {
         setMessage('');
-        console.log('Emptitied string');
       });
     }
+  }
+
+  useEffect(() => {
+    socket.on('roomData', (newUsers) => {
+      setUsersInRoom([
+        ...usersInRoom,
+        newUsers
+      ]);
+      newUsers.users.map((elem) =>
+        setUsersInRoom([
+          ...usersInRoom,
+          elem.name
+        ])
+      );
+    })
+  }, [usersInRoom]);
+
+  const getUsers = event => {
+    socket.emit('roomData', (usersInRoom), () => {
+      console.log('getting users list...');
+    })
   }
 
   return (
