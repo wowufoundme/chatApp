@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactEmoji from 'react-emoji';
 import styled, { keyframes } from 'styled-components';
 import { fadeInDown } from 'react-animations';
 
@@ -41,7 +42,7 @@ const Message = props => {
                 You
               </div>
               <div className='messageSent'>
-                {text}
+                {ReactEmoji.emojify(text)}
               </div>
             </div>
           </FadeInDown>
@@ -53,7 +54,7 @@ const Message = props => {
                 }
             </div>
             <div className='messageSent'>
-              {text}
+              {ReactEmoji.emojify(text)}
             </div>
           </div>
         )
